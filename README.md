@@ -1,8 +1,5 @@
-#### The Project
-A small bit of prognostication here... the project was started Apr. 18, 2018 and is still underway (as of May 8th).  It doesn't entirely work yet but it will, and when it does the source and docs will be here in all their glory.  Have a little faith and refer to the **Status Report** on the [Projects](https://github.com/wineasio/wineasio/projects) page.
-
-#### Update
-The driver is outputting clean audio with JACK1 and JACK2.  The worst is over.
+#### The Project (Updated)
+The project was started Apr. 18, 2018.  It is now May 21st.  Almost all of the code is written.  What remains is support-kind of stuff--the hard stuff having been completed.  The driver now works with JACK and JACK2.  When the code is ready for beta release, it will be available on GitHub along with docs.  Check the **Status Report** on the [Projects](https://github.com/wineasio/wineasio/projects) page.  Thanks for your interest!
 
 ---
 
