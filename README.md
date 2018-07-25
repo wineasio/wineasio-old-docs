@@ -43,7 +43,7 @@ If you want to fix a bug or make an improvement (there must be _at least_ one bu
 ## Enjoy!
 
 # Help Wanted
-If you'd like to take a stab at creating a better **WineASIO logo** for this site, then by all means, have at it!  The current logo is admittedly a 5-minute dog's breakfast.
+If you'd like to take a stab at creating a better **WineASIO logo** for this site, then by all means, have at it!  The current logo is admittedly a 5-minute dog's breakfast in 500x500 pixels.
 
 ---
 _"No deadlines, man.  You get the software, bug-fixes, and updates when they_ arrive.  _The Dude abides."_
