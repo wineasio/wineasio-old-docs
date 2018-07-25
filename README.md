@@ -26,7 +26,7 @@ Follow the procedure in the [QUICKSTART.md](https://github.com/wineasio/wineasio
 
 2. Have a look at the [INSTALL.md](https://github.com/wineasio/wineasio/blob/master/INSTALL.md) to configure, compile, and install the software.
 
-3. Once installed, check out the [USAGE.md](https://github.com/wineasio/wineasio/blob/master/USAGE.md) file for info on passing parameters to WineASIO through the environment, and tips on getting the most out of the program.
+3. Once installed, check out the [HOWTO-PARAMS.md](https://github.com/wineasio/wineasio/blob/master/HOWTO-PARAMS.md) file for info on passing parameters to WineASIO to suit your needs, and tips on getting the most out of the program.
 
 ## Questions?
 Check the [FAQ.md](https://github.com/wineasio/wineasio/blob/master/FAQ.md).
