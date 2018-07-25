@@ -17,10 +17,10 @@ _WineASIO_ is a free software driver for WINE that provides all of the above.
 * Tested with WINE 3.0.x and 3.1.x (both "Vanilla" and "Staging" editions)
 * Fully configurable
 ---
-## Hate Reading Documentation?
+## Quickstart for Those Who Hate Reading Docs
 Follow the procedure in the [QUICKSTART.md](https://github.com/wineasio/wineasio/blob/master/QUICKSTART.md) file.  It should get you installed and up-and-running in most environments, but with little-to-no explanation.
 
-## For the Patient
+## For the Patient and Docs-Friendly
 1. Browse the [KNOWN-APPS.md](https://github.com/wineasio/wineasio/blob/master/KNOWN-APPS.md) file to see if there are any issues related to the Windows application(s) you intend to use with WineASIO.  If your program is not listed (and in the early days of beta, it won't be) try it and let us know!  Chances are, if your Windows audio program runs correctly under WINE (albiet with a default audio driver) and was designed to take advantage of ASIO, then it will work with WineASIO.
 
 2. Have a look at the [INSTALL.md](https://github.com/wineasio/wineasio/blob/master/INSTALL.md) to configure, compile, and install the software.
