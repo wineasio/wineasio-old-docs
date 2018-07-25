@@ -5,7 +5,7 @@ You have professional audio composition, production, or engineering software tha
 
 How?
 
-You'd like to use the Windows Emulator ([WINE](https://www.winehq.org)) for Linux, but you need _low-latency, high performance audio ([ASIO](https://en.wikipedia.org/wiki/Audio_Stream_Input/Output))_ _support.  Plus you'd like to _route your audio through [JACK](http://jackaudio.org)_ so you can send audio output from one program to the input of another.
+You'd like to use the Windows Emulator ([WINE](https://www.winehq.org)) for Linux, but you need *low-latency, high performance audio ([ASIO](https://en.wikipedia.org/wiki/Audio_Stream_Input/Output))* support.  Plus you'd like to *route your audio through [JACK](http://jackaudio.org)* so you can send audio output from one program to the input of another.
 
 ## Solution
 _WineASIO_ is a free software driver for WINE that provides all of the above.
@@ -16,6 +16,7 @@ _WineASIO_ is a free software driver for WINE that provides all of the above.
 * Compatible with 32-bit and 64-bit WINE and Windows software
 * Tested with WINE 3.0.x and 3.1.x (both "vanilla" and "staging" releases)
 * Fully configurable
+---
 ---
 ## Quickstart
 Follow the procedure in the [QUICKSTART.md](https://github.com/wineasio/wineasio/blob/master/QUICKSTART.md) file.  It should get you installed and up-and-running in most environments, but with little-to-no explanation.
