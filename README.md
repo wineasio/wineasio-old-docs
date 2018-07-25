@@ -9,7 +9,7 @@ You'd like to use the Windows Emulator ([WINE](https://www.winehq.org)) for Linu
 
 ## *Solution*
 
-_WineASIO_ is a free software driver for WINE that provides all of the above.
+_WineASIO_ is a free software driver for WINE that provides all of the above, including:
 
 * ASIO v2.3 support, backwards-compatible to v1.0
 * JACK Audio Connection Kit support (JACK and JACK2)
