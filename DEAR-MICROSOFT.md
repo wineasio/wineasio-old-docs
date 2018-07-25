@@ -7,5 +7,5 @@ Sincerely,
                                          
 The WineASIO Developers
 
-P.S. And please, please, please, don't rename the site "Microsoft GitHub".  We all know by now.
+P.S. And please, please, please, don't rename us "Microsoft GitHub".  We all know by now.
 
