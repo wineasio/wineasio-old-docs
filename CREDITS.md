@@ -1,5 +1,6 @@
 # CREDITS
-### _"We stand on the shoulders of giants."_
+### > _"If I have seen further it is by standing on the shoulders of Giants."_
+### - Isaac Newton, 1675
 
 ---
 
