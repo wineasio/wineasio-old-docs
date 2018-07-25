@@ -1,4 +1,4 @@
-# CREDITS
+# Credits
 
 ## 2018
 * Michael "mcnster" Nelson
