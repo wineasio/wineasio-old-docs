@@ -10,7 +10,7 @@
 
 | Application | Version | Bits | Description |
 | :--- | :--- | :---: | :--- |
-| FL Studio | 12, 20 | 64/32 | _Sample Rate_ will be reset to 44,100 on app startup regardless of registry/environment. Change after app starts. |
+| FL Studio | 12, 20 | 64/32 | _Sample Rate_ will be reset to 44,100 on startup regardless of registry/environment. To change, use **Audio Dialog** after application starts. |
 
 ## Do Not Work
 
