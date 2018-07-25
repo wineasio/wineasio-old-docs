@@ -1,4 +1,4 @@
-# Credits
+# Credits and Copyrights
 
 ## 2018
 * Michael "mcnster" Nelson
@@ -21,6 +21,9 @@
 
 ## 2006
 * Robert Reif
+
+## 2003
+* John K. Hohn
 
 ---
 
