@@ -38,7 +38,7 @@ If you still can't get it to work, have a look at WineASIO's [Issues](https://gi
 If you're curious how WineASIO works, check out [INTERNALS.md](https://github.com/wineasio/wineasio/blob/master/INTERNALS.md) for some technical nitty-gritty.
 
 ## Contributing
-If you want to fix a bug or make an improvement (there must be _at least_ one bug!), first deeply contemplate [CODING-STYLE.md](https://github.com/wineasio/wineasio/blob/master/CODING-STYLE.md), then make your changes and submit a [pull request](https://github.com/wineasio/wineasio/pulls).  Make sure you add yourself to the [AUTHORS.md](https://github.com/wineasio/wineasio/blob/master/AUTHORS.md) file.
+If you want to fix a bug or make an improvement (there must be _at least_ one bug!), first deeply contemplate [CODING-STYLE.md](https://github.com/wineasio/wineasio/blob/master/CODING-STYLE.md), then make your changes and submit a [pull request](https://github.com/wineasio/wineasio/pulls).  Make sure you add yourself to the [CREDITS.md](https://github.com/wineasio/wineasio/blob/master/CREDITS.md) file.
 
 ## Enjoy!
 
