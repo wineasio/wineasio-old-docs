@@ -39,7 +39,7 @@ If you're curious how WineASIO works, check out [INTERNALS.md](https://github.co
 ## Contributing
 If you want to fix a bug or make an improvement (there must be _at least_ one bug!), first deeply contemplate [CODING-STYLE.md](https://github.com/wineasio/wineasio/blob/master/CODING-STYLE.md), then make your changes and submit a [pull request](https://github.com/wineasio/wineasio/pulls).  Make sure you add yourself to the [AUTHORS.md](https://github.com/wineasio/wineasio/blob/master/AUTHORS.md) file.
 
-Enjoy!
+## Enjoy!
 
 # Help Wanted
 If you'd like to take a stab at creating a better **WineASIO logo** for this site, then by all means, have at it!  The current logo is admittedly a 5-minute dog's breakfast.
