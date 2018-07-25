@@ -1,5 +1,4 @@
 # CREDITS
-
 ### _"We stand on the shoulders of giants."_
 
 ---
