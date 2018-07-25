@@ -1,6 +1,6 @@
 # CREDITS
-> _If I have seen further it is by standing on the shoulders of Giants."
-- Isaac Newton, 1675
+> **_If I have seen further it is by standing on the shoulders of Giants._**
+- [ ] Isaac Newton, 1675
 
 ---
 
