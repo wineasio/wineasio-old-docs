@@ -1,9 +1,4 @@
 # CREDITS
-## 1675
-> **_If I have seen further it is by standing on the shoulders of Giants._**
-- Isaac Newton
-
----
 
 ## 2018
 * Michael "mcnster" Nelson
@@ -26,3 +21,9 @@
 
 ## 2006
 * Robert Reif
+
+---
+
+## 1675
+> **_If I have seen further it is by standing on the shoulders of Giants._**
+* Isaac Newton
