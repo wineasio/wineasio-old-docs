@@ -14,5 +14,5 @@ _WineASIO_ is a free software driver for WINE that provides all of the above.
 * JACK Audio Connection Kit support (JACK and JACK2)
 * Hardware-independent; use with your specialized audio gear
 * Compatible with 32-bit and 64-bit WINE and Windows software
-* Tested with WINE 3.0.x and 3.1.x (both "Vanilla" and "Staging" editions)
+* Tested with WINE 3.0.x and 3.1.x (both "vanilla" and "staging" releases)
 * Fully configurable
