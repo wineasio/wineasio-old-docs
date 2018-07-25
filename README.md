@@ -1,4 +1,4 @@
-### UNDER CONSTRUCTION -- CHECK BACK JULY 26, 2018
+### UNDER CONSTRUCTION -- CHECK BACK JULY 28, 2018
 
 #### Dilemma
 You have professional audio composition, production, or engineering software that is designed to run on Windows, _but you'd prefer to work in [Linux](https://en.wikipedia.org/wiki/Linux)._
