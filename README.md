@@ -1,4 +1,4 @@
-_WineASIO_ is a free software driver for [Wine](https//www.winehq.org) (winehq.org) that provides *low-latency, high-performance audio ([ASIO](https://en.wikipedia.org/wiki/Audio_Stream_Input/Output))*.
+_WineASIO_ is a free software driver for [Wine](https//www.winehq.org) (winehq.org) that provides *low-latency, high-performance audio* by way of [ASIO](https://en.wikipedia.org/wiki/Audio_Stream_Input/Output) (wikipedia.org).
 
 _WineASIO_ enables you to use professional Windows audio composition, production, or engineering software *on Linux*.  (Not that there isn't [professional audio software](https://en.wikipedia.org/wiki/List_of_linux_audio_software) (wikipedia.org) already available on Linux, natively ...)
 
