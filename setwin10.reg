@@ -1,0 +1,13 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion]
+"CSDVersion"=""
+"CurrentBuildNumber"="15063"
+"CurrentVersion"="10.0"
+"ProductName"="Microsoft Windows 10"
+
+[HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Windows]
+"CDSVersion"=dword:00000000
+
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"LogPixels"=dword:00000095

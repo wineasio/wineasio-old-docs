@@ -1,65 +1,83 @@
-# UNDER CONSTRUCTION -- ANY DAY NOW
+# README.md
 
-## *Dilemma*
-You have professional audio composition, audio production, or audio engineering software that is designed to run on Windows, _but you'd prefer to work in [Linux](https://en.wikipedia.org/wiki/Linux)._
+Lossless/skipless FL Studio audio piped through JACK on Linux with Wine.
+(But other Windoze audio programs that make use of ASIO should work as well.)
 
-How?
+## Installation for FL Studio 20
 
-You'd like to use the Windows Emulator ([WINE](https://www.winehq.org)) for Linux, but you need *low-latency, high performance audio ([ASIO](https://en.wikipedia.org/wiki/Audio_Stream_Input/Output))* support.  Plus you'd like to *route your audio through [JACK](http://jackaudio.org)* so you can send audio output from one program to the input of another.
+(Other Windoze audio programs that make use of ASIO should work as well.)
 
-## *Resolution*
+### Install Wine, JACK, and qjackctl
 
-_WineASIO_ is a free software driver for WINE that provides all of the above, including:
+(Per your Linux distribution.)
 
-* ASIO v2.3 support, backwards-compatible to v1.0
-* JACK Audio Connection Kit support (JACK and JACK2)
-* Hardware-independent; use with your specialized audio gear
-* Compatible with 32-bit and 64-bit WINE and Windows software
-* Tested with WINE 3.0.x and 3.1.x (both "vanilla" and "staging" releases)
-* Fully configurable
----
----
-## About
-_WineASIO_ is a device driver for WINE in the form of two (2) .dll files (32-bit and 64-bit).  The WineASIO .dlls are installed into WINE's system-wide .dll directories once.  Then whenever you create a _new_ WINEPREFIX directory (to install your Windows apps into), the WineASIO .dlls need to be _registered_ into that WINEPREFIX.  From that time forward, whenever you use WINE to run ASIO-enabled Windows apps within that WINEPREFIX, you will be able to select 'WineASIO' as the default audio driver _using those apps_.  (The exact procedure varies from app to app, but is usually done in the specific app's "Audio Settings" dialog or similar.)
+### Install the WineASIO driver
 
-WineASIO will automatically start the JACK server and route capture and playback audio to/from your Windows app through JACK.  It is up to you to determine how you want to route your audio further (for instance, to another app, from a microphone or microphones, or to your monitor speakers, etc).  The typical way to do this is through a JACK-control utility such as 'qjackctl' which can be installed from your Linux distribution or from source.
+```shell
+$ git clone https://github.com/wineasio/wineasio
+$ cd wineasio
+$ make
+# make install
+$ export WINEARCH=win64
+$ wine64 regsvr32 wineasio.dll
+```
 
-You can also pass parmeters to WineASIO through the Unix environment (when you start your Windows app) to tailor WineASIO's behaviour.  But for most uses the defaults compiled into WineASIO should work fine.
+The `make install` assumes [Arch Linux](https://www.archlinux.org).  Adjust the `Makefile` to specify the directory of your system-wide Wine libraries if necessary.
 
-And that's all there is to it.
+### Configure Wine to emulate Windows 10
 
-## Building and Installing
-Unfortunately, due to the restrictive licensing terms of the ASIO Software Development Kit (SDK), we cannot offer prebuilt binary .dll files for WineASIO.  You must first _build_ the .dll's on your computer.  Then they can be installed.
+```shell
+$ wine64 regedit setwin10.reg
+```
 
-Fortunately, this has been made a relatively-painless process, and you will find specific instructions for all the major Linux distributions.
+### Install FL Studio
 
-See [docs/INSTALL.md](docs/INSTALL.md) for details.
+```shell
+$ wine64 ~/path/to/flstudio-20-win-installer.exe
+```
 
-## Application-Specific Notes
-Browse [docs/TESTED-APPS.md](docs/TESTED-APPS.md) to see if there are any issues with your Windows app and WineASIO.  If your app is not listed (and in the early days of beta, it won't be), try it and let us know!  Chances are, if your Windows audio app runs correctly under WINE, and was designed to take advantage of ASIO, then it will work fine with WineASIO.
+You can download a free demo of FL Studio at [https://www.image-line.com](https://www.image-line.com).  All components are enabled except Save.
 
-## Changing WineASIO Parmeters
-Check out [docs/PARAMS.md](docs/PARAMS.md) for info on passing parameters to WineASIO to suit specific use-cases and tastes.
+### PAM tweaks for real-time/low-latency
 
-## Questions?
-Check the [docs/FAQ.md](docs/FAQ.md).
+* Create an `audio` group (if it does not already exist):
+```shell
+# groupadd audio
+```
+* Add yourself to the `audio` group:
+```shell
+# usermod -a -G audio yourUserID
+```
+* Add to `/etc/security/limits.conf`:
+```
+@audio		-	rtprio		99
+@audio		-	memlock		unlimited
+```
+* Logout and login again.
 
-## IRC Chatroom
-Join us on channel **#wineasio** on server **irc.freenode.net** to ask questions or get help.
+## Running FL Studio
 
-## Troubles and Issues
-If you absolutely _can't_ get WineASIO to work with your app, have a look at the [Issues](https://github.com/wineasio/wineasio/issues) page for a solution, and if your issue is unreported, create a [new issue](https://github.com/wineasio/wineasio/issues/new).
+### Start Jack with qjackctl
 
-## For The Techies
-If you're wondering how WineASIO works on the inside, check out [docs/INTERNALS.md](docs/INTERNALS.md) for some technical nitty-gritty.
+```shell
+$ qjackctl
+```
 
-## Contributing
-If you fix a bug or want to make an improvement to the WineASIO codebase (there must be _at least_ one bug!), first deeply contemplate [docs/CODING-STYLE.md](docs/CODING-STYLE.md) then make your changes and submit a [pull request](https://github.com/wineasio/wineasio/pulls).
+* Set the `samplerate` to `44,100` Hz.
+* Set the `frames/period` to `2,048` and `periods/buffer` to `4` to begin with, and adjust up or down as required.
+* Start the JACK server with qjackctl.  Check for errors in the Messages/Status window.  Be sure JACK is running in real-time mode.
 
----
+### Start FL Studio
 
-# Help Wanted
-If you'd like to take a crack at creating a better **WineASIO logo**, then by all means, have at it!  The current logo is admittedly a 5-minute dog's breakfast in 500x500 pixels.
+```shell
+$ wine64 ~/.wine/drive_c/Program\ Files/Image-Line/FL\ Studio\ 20/FL64.exe 2>&1 | tee /dev/null
+```
 
----
-_"No deadlines, man.  You get the software, bug-fixes, and updates when they_ arrive.  _The Dude abides."_
+(The somewhat bizarre 'tee' is necessary to prevent Wine from blocking indefinitely on start-up.  If anyone knows why this is the case, kindly let me know.)
+
+### Within FL Studio
+
+* On the main menu, click `Options | Audio settings...' and set `Device` to `WineASIO`.
+* Observe the JACK graph in qjackctl.  Eight (8) inputs and eight (8) outputs will be created and connected.
+
+Play the demo song, then dig in! :)
