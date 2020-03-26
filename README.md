@@ -1,11 +1,9 @@
 # README.md
 
-Lossless/skipless FL Studio audio piped through JACK on Linux with Wine.
-(But other Windoze audio programs that make use of ASIO should work as well.)
+Lossless/skipless FL Studio audio piped through JACK on Linux with Wine.  Other Windoze audio programs that make use of ASIO should work as well.
+
 
 ## Installation for FL Studio 20
-
-(Other Windoze audio programs that make use of ASIO should work as well.)
 
 ### Install Wine, JACK, and qjackctl
 
@@ -22,7 +20,7 @@ $ export WINEARCH=win64
 $ wine64 regsvr32 wineasio.dll
 ```
 
-The `make install` assumes [Arch Linux](https://www.archlinux.org).  Adjust the `Makefile` to specify the directory of your system-wide Wine libraries if necessary.
+`make install` assumes [Arch Linux](https://www.archlinux.org).  Adjust the `Makefile` to specify the directory of your system-wide Wine libraries if necessary.
 
 ### Configure Wine to emulate Windows 10
 
@@ -55,6 +53,7 @@ You can download a free demo of FL Studio at [https://www.image-line.com](https:
 ```
 * Logout and login again.
 
+
 ## Running FL Studio
 
 ### Start Jack with qjackctl
@@ -73,11 +72,11 @@ $ qjackctl
 $ wine64 ~/.wine/drive_c/Program\ Files/Image-Line/FL\ Studio\ 20/FL64.exe 2>&1 | tee /dev/null
 ```
 
-(The somewhat bizarre 'tee' is necessary to prevent Wine from blocking indefinitely on start-up.  If anyone knows why this is the case, kindly let me know.)
+(The somewhat bizarre `tee` is necessary to prevent Wine from blocking indefinitely on start-up.  If anyone knows why this is the case, kindly let me know.)
 
 ### Within FL Studio
 
-* On the main menu, click `Options | Audio settings...' and set `Device` to `WineASIO`.
+* On the main menu, click `Options | Audio settings...` and set `Device` to `WineASIO`.
 * Observe the JACK graph in qjackctl.  Eight (8) inputs and eight (8) outputs will be created and connected.
 
 Play the demo song, then dig in! :)
