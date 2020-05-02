@@ -1355,15 +1355,15 @@ get_client_name_param (IWineASIOImpl *This)
 
     GetModuleFileNameW (0, app_path, MAX_PATH);
 
-    app_name = strrchrW (app_path, L'.');
+    app_name = wcsrchr (app_path, L'.');
     *app_name = 0;
 
-    app_name = strrchrW (app_path, L'\\');
+    app_name = wcsrchr (app_path, L'\\');
     app_name++;
 
     for (p = app_name; *p != 0; p++)
     {
-        *p = tolowerW (*p);
+        *p = _wcslwr (*p);
     }
 
     WideCharToMultiByte (CP_ACP, WC_SEPCHARS, app_name, -1,
