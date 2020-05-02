@@ -52,6 +52,7 @@
 #include <unistd.h>
 #include <sys/mman.h>
 #include <pthread.h>
+#include <string.h>
 
 #include <windows.h>
 #include <mmsystem.h>
@@ -1355,6 +1356,7 @@ get_client_name_param (IWineASIOImpl *This)
 
     GetModuleFileNameW (0, app_path, MAX_PATH);
 
+#if 0
     app_name = wcsrchr (app_path, L'.');
     *app_name = 0;
 
@@ -1365,7 +1367,7 @@ get_client_name_param (IWineASIOImpl *This)
     {
         *p = _wcslwr (*p);
     }
-
+#endif
     WideCharToMultiByte (CP_ACP, WC_SEPCHARS, app_name, -1,
                          This->jack_client_name, WINEASIO_MAX_NAME_LEN,
                          NULL, NULL);
